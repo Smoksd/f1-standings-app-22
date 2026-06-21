@@ -10,13 +10,25 @@ st.set_page_config(
     layout="centered"
 )
 
-# Оновлений блок: ховаємо інтерфейс + додаємо іконку для мобільних пристроїв
 hide_style = """
     <style>
-    #MainMenu {visibility: hidden;}
-    footer {visibility: hidden;}
-    .viewerBadge_container__1QS1Y, [data-testid="stViewerBadge"] {display: none !important;}
-    header {visibility: hidden;}
+    /* Повне видалення кнопки Manage app та будь-яких системних плашок внизу */
+    [data-testid="stViewerBadge"], 
+    .viewerBadge_container__1QS1Y, 
+    div[class^="viewerBadge"],
+    iframe + div, 
+    footer {
+        display: none !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        height: 0 !important;
+    }
+    
+    /* Ховаємо верхнє меню та шапку */
+    #MainMenu, header {
+        visibility: hidden !important;
+        display: none !important;
+    }
     </style>
     
     <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/Smoksd/f1-app/main/logo_team/f1_logo.png">
