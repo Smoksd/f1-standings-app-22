@@ -4,7 +4,13 @@ import os
 import base64
 
 st.set_page_config(layout="wide")
+st.set_page_config(
+    page_title="F1 2022",
+    page_icon="logo_team/f1_logo.png",
+    layout="centered"
+)
 
+# Оновлений блок: ховаємо інтерфейс + додаємо іконку для мобільних пристроїв
 hide_style = """
     <style>
     #MainMenu {visibility: hidden;}
@@ -12,6 +18,9 @@ hide_style = """
     .viewerBadge_container__1QS1Y, [data-testid="stViewerBadge"] {display: none !important;}
     header {visibility: hidden;}
     </style>
+    
+    <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/Smoksd/f1-app/main/logo_team/f1_logo.png">
+    <link rel="icon" sizes="192x192" href="https://raw.githubusercontent.com/Smoksd/f1-app/main/logo_team/f1_logo.png">
 """
 st.markdown(hide_style, unsafe_allow_html=True)
 
