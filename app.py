@@ -5,6 +5,16 @@ import base64
 
 st.set_page_config(layout="wide")
 
+hide_style = """
+    <style>
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
+    .viewerBadge_container__1QS1Y, [data-testid="stViewerBadge"] {display: none !important;}
+    header {visibility: hidden;}
+    </style>
+"""
+st.markdown(hide_style, unsafe_allow_html=True)
+
 # Логотип F1 ______________________________________________________________________________________________________________________
 st.markdown(
     '<div style="text-align: right; padding-right: 40px; padding-top: 35px;">'
